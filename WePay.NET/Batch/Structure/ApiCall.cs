@@ -31,6 +31,8 @@ namespace WePay.Batch.Structure
         /// </summary>
         [StringLength(255, ErrorMessage = Identifier + " - ReferenceId cannot exceed 255 characters")]
         public string ReferenceId { get; set; }
+
+
     }
 
     public class ApiCall<T> : ApiCall where T : WePayResponse

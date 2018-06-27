@@ -2872,21 +2872,21 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\PISS\\.nuget\\packages\\": {},
+    "C:\\Users\\jason.warren\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.5.11",
+    "version": "1.0.5.9",
     "restoreSettings": {
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "D:\\GIT\\WePay.NET\\WePay.NET\\WePay.NET.csproj",
+      "projectUniqueName": "C:\\code\\WePay.NET-master\\WePay.NET-master\\WePay.NET\\WePay.NET.csproj",
       "projectName": "WePay.NET",
-      "projectPath": "D:\\GIT\\WePay.NET\\WePay.NET\\WePay.NET.csproj",
-      "packagesPath": "C:\\Users\\PISS\\.nuget\\packages\\",
-      "outputPath": "D:\\GIT\\WePay.NET\\WePay.NET\\obj\\",
+      "projectPath": "C:\\code\\WePay.NET-master\\WePay.NET-master\\WePay.NET\\WePay.NET.csproj",
+      "packagesPath": "C:\\Users\\jason.warren\\.nuget\\packages\\",
+      "outputPath": "C:\\code\\WePay.NET-master\\WePay.NET-master\\WePay.NET\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
@@ -2894,7 +2894,7 @@
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\PISS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jason.warren\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],

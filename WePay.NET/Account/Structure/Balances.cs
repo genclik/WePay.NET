@@ -50,24 +50,29 @@ namespace WePay.Account.Structure
         /// (Enumeration of these values can be found in WePay.Shared.Common.SettlementPaymentMethods)
         /// </summary>
         [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.Shared.Common.SettlementPaymentMethods")]
-        public string WthdrawlType { get; set; }
+        public string WithdrawlType { get; set; }
 
         /// <summary>
         /// (Enumeration of these values can be found in WePay.Shared.Common.Frequencies )
         /// </summary>
         [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.Shared.Common.Frequencies")]
-        public string WithdrawalPeriod { get; set; }
+        public string WithdrawlPeriod { get; set; }
 
         /// <summary>
         /// The Unix timestamp (UTC) for the next scheduled settlement.
         /// </summary>
-        public long? WithdrawalNextTime { get; set; }
+        /*
+        public long? WithdrawlNextTime { get; set; }
+        */
+
+        public long? withdrawal_next_time { get; set; }
+
 
         /// <summary>
         /// The masked name of the entity funds will be settled to.
         /// If a check is being sent, this will be the name of the entity the check was mailed to (the "pay to the order of" field).
         /// </summary>
-        [StringLength(6, ErrorMessage = Identifier + " - WithdrawalBankName cannot exceed 6 characters")]
-        public string WithdrawalBankName { get; set; }
+        [StringLength(6, ErrorMessage = Identifier + " - WithdrawlBankName cannot exceed 6 characters")]
+        public string WithdrawlBankName { get; set; }
     }
 }

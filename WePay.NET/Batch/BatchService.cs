@@ -1,12 +1,20 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using WePay.Batch.Request;
 using WePay.Batch.Response;
+using WePay.Checkout.Response;
 using WePay.Shared;
 
 namespace WePay.Batch
 {
+    public class CheckOutParamRequest : WePayRequest<WePay.Checkout.Response.LookupResponse>
+    {
+        public string checkout_id { get; set; }
+        public LookupResponse response { get; set; }
+    }
+
     /// <summary>
     /// Use the following call to make multiple API calls with one HTTP request.
     /// CAUTION: Batch API calls allow your application to avoid throttling limits on sequential API calls.
@@ -41,12 +49,17 @@ namespace WePay.Batch
             {
                 for (int i = 0; i < response.Calls.Count; ++i)
                 {
-                    type = createRequest.Calls
-                                        .GetType()
-                                        .BaseType
-                                        .GetGenericArguments()[0];
+                    // createRequest.Calls
+                    //type = response.Calls[0].Last.GetType();
 
-                    results.Add((WePayResponse)response.Calls[i].ToObject(type));
+                    //.GetType()
+                    //.BaseType
+                    //.GetGenericArguments()[0];
+
+                    // type = new JObject().GetType();
+
+                    type = new LookupResponse().GetType();
+                    results.Add((WePayResponse)response.Calls[i].Last.First.ToObject(type));
                 }
             }
 

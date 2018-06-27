@@ -107,8 +107,6 @@ namespace WePay.Shared
                                                     string accessToken,
                                                     bool? useStaging) where T : WePayResponse
         {
-            StringContent httpContent = null;
-
             if (EnableValidation)
             {
                 string message = GetExceptionMessage(Request, accessToken ?? AccessToken);
@@ -119,11 +117,8 @@ namespace WePay.Shared
                 }
             }
 
-            if (Request != null)
-            {
-                var json = await Task.Run(() => JsonConvert.SerializeObject(Request, Formatting, JsonSerializerSettings));
-                httpContent = new StringContent(json, Encoding.UTF8, JsonMediaType);
-            }
+            var json = await Task.Run(() => JsonConvert.SerializeObject(Request, Formatting, JsonSerializerSettings));
+            var httpContent = new StringContent(json, Encoding.UTF8, JsonMediaType);
 
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12 | SecurityProtocolType.Ssl3;
             ServicePointManager.ServerCertificateValidationCallback = delegate (object s, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors) { return true; };
