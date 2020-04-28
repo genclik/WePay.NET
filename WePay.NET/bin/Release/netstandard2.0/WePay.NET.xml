@@ -887,7 +887,7 @@
             The amount of money disputed either via chargeback or through WePay.
             </summary>
         </member>
-        <member name="P:WePay.Account.Structure.Balances.WthdrawlType">
+        <member name="P:WePay.Account.Structure.Balances.WithdrawlType">
             <summary>
             How the money will be settled to the merchant.
             (Enumeration of these values can be found in WePay.Shared.Common.SettlementPaymentMethods)
@@ -898,7 +898,7 @@
             (Enumeration of these values can be found in WePay.Shared.Common.Frequencies )
             </summary>
         </member>
-        <member name="P:WePay.Account.Structure.Balances.WithdrawlNextTime">
+        <member name="P:WePay.Account.Structure.Balances.withdrawal_next_time">
             <summary>
             The Unix timestamp (UTC) for the next scheduled settlement.
             </summary>
